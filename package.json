@@ -1,0 +1,37 @@
+{
+  "name": "doraemon-cache-loader",
+  "version": "1.0.0",
+  "description": "webpack 缓存加载器",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "npm run build -- -w",
+    "build": "cross-env NODE_ENV=production babel src -d dist",
+    "clean": "del-cli dist",
+    "prebuild": "npm run clean",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lmm0591/doraemon-cache-loader.git"
+  },
+  "author": "lmm0591@qq.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lmm0591/doraemon-cache-loader/issues"
+  },
+  "homepage": "https://github.com/lmm0591/doraemon-cache-loader#readme",
+  "dependencies": {
+    "async": "^2.4.1",
+    "loader-utils": "^1.1.0",
+    "mkdirp": "^0.5.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "cross-env": "^5.0.5",
+    "del-cli": "^1.1.0"
+  }
+}
